@@ -1,0 +1,25 @@
+{
+  "suggest.noselect": false,
+  "suggest.floatEnable": true,
+  "suggest.enablePreview": true,
+  "suggest.fixInsertedWord": true,
+  "suggest.maxCompleteItemCount": 10,
+  "javascript.suggest.autoImports": false,
+  "typescript.suggest.completeFunctionCalls": false,
+  "typescript.suggest.autoImports": true,
+  "explorer.icon.enableNerdfont": true,
+  "eslint.run": "onSave",
+  "list.source.grep.useLiteral": false,
+  "tsserver.formatOnType": false,
+  "coc.preferences.rootPatterns": [
+    "tsconfig.json",
+    ".git",
+    ".hg",
+    ".projections.json"
+  ],
+  "tsserver.watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriorityPolling"
+  }
+}

@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/jun/tgt/core-interpretetion-fe'
+let g:netrw_dirhist_0='/Users/jun/myvim-coc'
+let g:netrw_dirhist_9='/Users/jun/.tmux/plugins/tpm'
+let g:netrw_dirhist_8='/Users/jun/.tmux/plugins'
+let g:netrw_dirhist_7='/private/var/folders/gq/dqz6pj9j4vlcfv727r14s9s00000gn/T/generated-fm/libs/fm'
+let g:netrw_dirhist_6='/private/var/folders/gq/dqz6pj9j4vlcfv727r14s9s00000gn/T/generated-fm/libs'
+let g:netrw_dirhist_5='/private/var/folders/gq/dqz6pj9j4vlcfv727r14s9s00000gn/T/generated-fm'
+let g:netrw_dirhist_4='/private/var/folders/gq/dqz6pj9j4vlcfv727r14s9s00000gn/T/generated-fm/libs/fm'
+let g:netrw_dirhist_3='/private/var/folders/gq/dqz6pj9j4vlcfv727r14s9s00000gn/T/generated-fm/libs'
+let g:netrw_dirhist_2='/private/var/folders/gq/dqz6pj9j4vlcfv727r14s9s00000gn/T/generated-fm'
