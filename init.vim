@@ -21,7 +21,7 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'rakr/vim-one'
 "typescript syntax
 Plug 'herringtondarkholme/yats.vim'
-
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/jsonc.vim'
 Plug 'junegunn/vim-easy-align'
