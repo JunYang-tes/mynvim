@@ -30,7 +30,8 @@ Plug 'tyru/caw.vim' "comment
 call plug#end()
 
 
-
+"set statusline += %<%f%= buf:%n %l,%c
+set statusline+=\ Ln\ %l,Col\ %c\ b:%n%=%f
 if filereadable(expand(root_path . '/plugged/coc.nvim/package.json'))
   execute 'source ' . root_path . '/plugged-config/coc.vim'
 endif
