@@ -64,6 +64,7 @@ endfunction
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd FileType coc-explorer set relativenumber
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
