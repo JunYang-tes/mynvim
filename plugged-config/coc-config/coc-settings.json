@@ -3,7 +3,6 @@
   "suggest.floatEnable": true,
   "suggest.enablePreview": true,
   "suggest.fixInsertedWord": true,
-  "suggest.maxCompleteItemCount": 10,
   "javascript.suggest.autoImports": false,
   "typescript.suggest.completeFunctionCalls": false,
   "typescript.suggest.autoImports": true,
@@ -17,6 +16,21 @@
     ".hg",
     ".projections.json"
   ],
+  "languageserver": {
+    "rescript": {
+      "enable": true,
+      "module": "~/myvim-coc/plugged/vim-rescript/server/out/server.js",
+      "args": [
+        "--node-ipc"
+      ],
+      "filetypes": [
+        "rescript"
+      ],
+      "rootPatterns": [
+        "bsconfig.json"
+      ]
+    }
+  },
   "tsserver.watchOptions": {
     "watchFile": "useFsEvents",
     "watchDirectory": "useFsEvents",
