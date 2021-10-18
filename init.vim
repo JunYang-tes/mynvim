@@ -29,6 +29,7 @@ Plug 'tyru/caw.vim' "comment
 Plug 'posva/vim-vue'
 Plug 'rescript-lang/vim-rescript'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'justinmk/vim-sneak'
 call plug#end()
 
 
@@ -42,6 +43,9 @@ if filereadable(expand(root_path . '/plugged/nvim-treesitter/lockfile.json'))
   execute 'source ' . root_path . '/plugged-config/nvim-treesitter.vim'
 endif
 
+if filereadable(expand(root_path . '/plugged/vim-sneak/README.md'))
+  execute 'source ' . root_path . '/plugged-config/sneak.vim'
+endif
 
 
 let g:lightline = {
