@@ -25,11 +25,13 @@ Plug 'tpope/vim-surround'
 Plug 'neoclide/jsonc.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'simnalamburt/vim-mundo'
-Plug 'tyru/caw.vim' "comment
+"Plug 'tyru/caw.vim' "comment
 Plug 'posva/vim-vue'
 Plug 'rescript-lang/vim-rescript'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'tpope/vim-commentary'
 Plug 'justinmk/vim-sneak'
 call plug#end()
 
