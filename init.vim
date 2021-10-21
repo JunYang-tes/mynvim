@@ -19,14 +19,20 @@ call plug#begin(root_path . '/plugged')
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'rakr/vim-one'
-"typescript syntax
-Plug 'herringtondarkholme/yats.vim'
-Plug 'maxmellon/vim-jsx-pretty'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'EdenEast/nightfox.nvim'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/jsonc.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'simnalamburt/vim-mundo'
-Plug 'tyru/caw.vim' "comment
+"Plug 'tyru/caw.vim' "comment
+Plug 'posva/vim-vue'
+Plug 'rescript-lang/vim-rescript'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'tpope/vim-commentary'
+Plug 'justinmk/vim-sneak'
 call plug#end()
 
 
@@ -36,14 +42,18 @@ if filereadable(expand(root_path . '/plugged/coc.nvim/package.json'))
   execute 'source ' . root_path . '/plugged-config/coc.vim'
 endif
 
-
-if filereadable(expand(root_path . '/plugged/yats.vim/package.json'))
-  execute 'source ' . root_path . '/plugged-config/yats.vim'
+if filereadable(expand(root_path . '/plugged/nvim-treesitter/lockfile.json'))
+  execute 'source ' . root_path . '/plugged-config/nvim-treesitter.vim'
 endif
 
+if filereadable(expand(root_path . '/plugged/vim-sneak/README.md'))
+  execute 'source ' . root_path . '/plugged-config/sneak.vim'
+endif
+
+
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'nightfox',
       \ }
-colorscheme one
+colorscheme nightfox
 
   
