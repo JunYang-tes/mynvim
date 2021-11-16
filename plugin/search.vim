@@ -22,13 +22,13 @@ endfunction
 
 function! DoSearchInFileAndCloseDialog(word,file,winid) abort 
   call DoSearchInFile(a:word,a:file)
-  call coc#float#close_i(a:winid)
+  call coc#float#close(a:winid)
   return ''
 endfunction
 
 function! DoSearchInFolderAndCloseDialog(pattern, file, winid) abort 
   call DoSearchInFolder(a:pattern,a:file)
-  call coc#float#close_i(a:winid)
+  call coc#float#close(a:winid)
   return ''
 endfunction
 

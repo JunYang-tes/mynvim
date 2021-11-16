@@ -33,6 +33,11 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'tpope/vim-commentary'
 Plug 'justinmk/vim-sneak'
+" Diff
+Plug 'nvim-lua/plenary.nvim'
+Plug 'sindrets/diffview.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+
 call plug#end()
 
 
@@ -48,6 +53,9 @@ endif
 
 if filereadable(expand(root_path . '/plugged/vim-sneak/README.md'))
   execute 'source ' . root_path . '/plugged-config/sneak.vim'
+endif
+if filereadable(expand(root_path . '/plugged/diffview.nvim/README.md'))
+  execute 'source ' . root_path . '/plugged-config/diff.vim'
 endif
 
 

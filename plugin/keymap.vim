@@ -57,7 +57,7 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 " Search
-nnoremap <silent> <leader>sf :<C-u>call Search()<cr>
+nnoremap <silent> <leader>sb :<C-u>call Search()<cr>
 nnoremap <silent> <leader>sd :<C-u>call SearchInFolder()<cr>
 
 nnoremap <script> <leader>a :<C-u>call CocActionAsync('codeAction','')<cr>
