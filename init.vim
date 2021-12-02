@@ -32,11 +32,11 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'tpope/vim-commentary'
-Plug 'justinmk/vim-sneak'
 " Diff
 Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'phaazon/hop.nvim'
 
 call plug#end()
 
@@ -51,12 +51,11 @@ if filereadable(expand(root_path . '/plugged/nvim-treesitter/lockfile.json'))
   execute 'source ' . root_path . '/plugged-config/nvim-treesitter.vim'
 endif
 
-if filereadable(expand(root_path . '/plugged/vim-sneak/README.md'))
-  execute 'source ' . root_path . '/plugged-config/sneak.vim'
-endif
 if filereadable(expand(root_path . '/plugged/diffview.nvim/README.md'))
   execute 'source ' . root_path . '/plugged-config/diff.vim'
 endif
+
+execute 'source ' . root_path . '/plugged-config/hop.vim'
 
 
 let g:lightline = {

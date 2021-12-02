@@ -67,3 +67,9 @@ nnoremap <script> <leader>a :<C-u>call CocActionAsync('codeAction','')<cr>
 "
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
+" hop
+nnoremap <silent> <leader>j :HopLine<CR>
+nnoremap <silent> f :HopChar1CurrentLineAC<CR>
+nnoremap <silent> F :HopChar1CurrentLineBC<CR>
+
