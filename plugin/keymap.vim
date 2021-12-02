@@ -43,7 +43,6 @@ nnoremap <silent> <leader>lo  :<C-u>CocList outline<cr>
 nnoremap <silent> <leader>ls  :<C-u>CocList -I symbols<cr>
 nnoremap <silent> <leader>lr  :<C-u>CocListResume<CR>
 nnoremap <silent> <leader>cf :<C-u>CocCommand tsserver.executeAutofix<CR>
-nnoremap <silent> <leader>cw  :<C-u>CocList --number-select wins<cr>
 nnoremap <silent> <leader>cj  :<C-u>CocNext<CR>
 nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
 " diagnostics
@@ -69,7 +68,8 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " hop
-nnoremap <silent> <leader>j :HopLine<CR>
+nnoremap <silent> <leader>hl :HopLine<CR>
+nnoremap <silent> <leader>hw :HopWord<CR>
 nnoremap <silent> f :HopChar1CurrentLineAC<CR>
 nnoremap <silent> F :HopChar1CurrentLineBC<CR>
 
