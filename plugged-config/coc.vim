@@ -98,7 +98,7 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 command! -nargs=0 Format :call CocActionAsync('format')
 
 " Use `:Fold` to fold current buffer
-command! -nargs=? Fold :call     CocActionAsync('fold', <f-args>)
+"command! -nargs=? Fold :call     CocActionAsync('fold', <f-args>)
 
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
@@ -107,16 +107,39 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 nmap ge :CocCommand explorer<CR>
+function! s:explorer_cur_dir()
+  let node_info = CocAction('runCommand', 'explorer.getNodeInfo', 0)
+  return fnamemodify(node_info['fullpath'], ':h')
+endfunction
 
-"- nmap f <Plug>(coc-smartf-forward)
-"- nmap F <Plug>(coc-smartf-backward)
-"- nmap ; <Plug>(coc-smartf-repeat)
-"- nmap , <Plug>(coc-smartf-repeat-opposite)
-"- 
-"- augroup Smartf
-"-   autocmd User SmartfEnter :hi Conceal ctermfg=220 guifg=#6638F0
-"-   autocmd User SmartfLeave :hi Conceal ctermfg=239 guifg=#504945
-"- augroup end
+function! s:exec_cur_dir(cmd)
+  let dir = s:explorer_cur_dir()
+  execute 'cd ' . dir
+  execute a:cmd
+endfunction
+
+function! s:init_explorer()
+  set winblend=10
+
+  " CocList
+  nmap <buffer> <Leader>fg <Cmd>call <SID>exec_cur_dir('CocList -I grep')<CR>
+  nmap <buffer> <Leader>fG <Cmd>call <SID>exec_cur_dir('CocList -I grep -regex')<CR>
+  nmap <buffer> <C-p> <Cmd>call <SID>exec_cur_dir('CocList files')<CR>
+endfunction
+
+function! s:enter_explorer()
+  if &filetype == 'coc-explorer'
+    " statusline
+    setl statusline=coc-explorer
+  endif
+endfunction
+
+augroup CocExplorerCustom
+  autocmd!
+  autocmd BufEnter * call <SID>enter_explorer()
+  autocmd FileType coc-explorer call <SID>init_explorer()
+augroup END
+
 
 " coc snippet
 " Use <C-l> for trigger snippet expand.

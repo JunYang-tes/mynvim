@@ -34,8 +34,8 @@ nnoremap <silent> <leader>lf  :<C-u>CocList files<cr>
 nnoremap <silent> <leader>ll  :<C-u>CocList lines<cr>
 nnoremap <silent> <leader>lw  :<C-u>CocList words<cr>
 nnoremap <silent> <leader>lm  :<C-u>CocList mru<cr>
-nnoremap <silent> <leader>lg  :<C-u>CocList grep<cr>
-nnoremap <silent> <leader>lb  :<C-u>CocList buffers<cr>
+nnoremap <silent> <leader>lg  :Telescope live_grep<cr>
+nnoremap <silent> <leader>lb  :Telescope buffers<cr>
 nnoremap <silent> <leader>ld  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <leader>le  :<C-u>CocList extensions<cr>
 nnoremap <silent> <leader>lc  :<C-u>CocList commands<cr>
@@ -72,4 +72,6 @@ nnoremap <silent> <leader>hl :HopLine<CR>
 nnoremap <silent> <leader>hw :HopWord<CR>
 nnoremap <silent> f :HopChar1CurrentLineAC<CR>
 nnoremap <silent> F :HopChar1CurrentLineBC<CR>
+
+nnoremap <silent> <leader>z :ZenMode<CR>
 

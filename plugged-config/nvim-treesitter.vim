@@ -28,3 +28,6 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
+
+set foldmethod=indent
+set foldlevelstart=99 

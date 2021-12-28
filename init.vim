@@ -36,7 +36,11 @@ Plug 'tpope/vim-commentary'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+
 Plug 'phaazon/hop.nvim'
+Plug 'folke/zen-mode.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 
@@ -50,17 +54,20 @@ endif
 if filereadable(expand(root_path . '/plugged/nvim-treesitter/lockfile.json'))
   execute 'source ' . root_path . '/plugged-config/nvim-treesitter.vim'
 endif
+if filereadable(expand(root_path . '/plugged/nvim-treesitter/lockfile.json'))
+  execute 'source ' . root_path . '/plugged-config/nvim-treesitter.vim'
+endif
 
-if filereadable(expand(root_path . '/plugged/diffview.nvim/README.md'))
-  execute 'source ' . root_path . '/plugged-config/diff.vim'
+if filereadable(expand(root_path . '/plugged/zen-mode.nvim/vim.toml'))
+  execute 'source ' . root_path . '/plugged-config/zen.vim'
 endif
 
 execute 'source ' . root_path . '/plugged-config/hop.vim'
 
 
 let g:lightline = {
-      \ 'colorscheme': 'nightfox',
+      \ 'colorscheme': 'one',
       \ }
-colorscheme nightfox
+colorscheme one
 
   
