@@ -42,11 +42,17 @@ Plug 'folke/zen-mode.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+Plug 'ahmedkhalf/jupyter-nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'mildred/vim-bufmru'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'windwp/nvim-spectre'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'nvim-lualine/lualine.nvim'
 call plug#end()
 
 
 "set statusline += %<%f%= buf:%n %l,%c
-set statusline+=\ Ln\ %l,Col\ %c\ b:%n%=%f
+"set statusline+=\ Ln\ %l,Col\ %c\ b:%n%=%f
 if filereadable(expand(root_path . '/plugged/coc.nvim/package.json'))
   execute 'source ' . root_path . '/plugged-config/coc.vim'
 endif

@@ -98,7 +98,7 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 command! -nargs=0 Format :call CocActionAsync('format')
 
 " Use `:Fold` to fold current buffer
-"command! -nargs=? Fold :call     CocActionAsync('fold', <f-args>)
+command! -nargs=? Fold :call     CocActionAsync('fold', <f-args>)
 
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
@@ -152,11 +152,4 @@ let g:coc_snippet_next = '<c-j>'
 
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
 let g:coc_snippet_prev = '<c-k>'
-
-" Use <C-j> for both expand and jump (make expand higher priority.)
-"imap <C-j> <Plug>(coc-snippets-expand-jump)
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
-
+let g:coc_explorer_open_win = 'g:open_float_win_for_coc_explorer'

@@ -1,7 +1,7 @@
 
 " Buffers
-nnoremap <silent> [b :bprevious<CR>
-nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [b :BufMRUPrev<CR>
+nnoremap <silent> ]b :BufMRUNext<CR>
 nnoremap <silent> <space>bd :bdelete<CR>
 nnoremap <silent> <space><tab> :b#<CR>
 
@@ -30,18 +30,18 @@ nnoremap <silent> [t :tabprevious<CR>
 
 " CocList
 nnoremap <silent> <leader>co  :<C-u>CocList <cr>
-nnoremap <silent> <leader>lf  :Telescope find_files<cr>
-nnoremap <silent> <leader>ll  :Telescope current_buffer_fuzzy_find<cr>
+nnoremap <silent> <leader>lf  :CocList files<cr>
+nnoremap <silent> <leader>ll  :CocList lines<cr>
 nnoremap <silent> <leader>lw  :<C-u>CocList words<cr>
 nnoremap <silent> <leader>lm  :<C-u>CocList mru<cr>
-nnoremap <silent> <leader>lg  :Telescope live_grep<cr>
-nnoremap <silent> <leader>lb  :Telescope buffers<cr>
+nnoremap <silent> <leader>lg  :CocList grep<cr>
+nnoremap <silent> <leader>lb  :CocList buffers<cr>
 nnoremap <silent> <leader>ld  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <leader>le  :<C-u>CocList extensions<cr>
 nnoremap <silent> <leader>lc  :<C-u>CocList commands<cr>
 nnoremap <silent> <leader>lo  :<C-u>CocList outline<cr>
 nnoremap <silent> <leader>ls  :<C-u>CocList -I symbols<cr>
-nnoremap <silent> <leader>lr  :Telescope resume<cr>
+nnoremap <silent> <leader>lr  :CocList resume<cr>
 nnoremap <silent> <leader>cf :<C-u>CocCommand tsserver.executeAutofix<CR>
 nnoremap <silent> <leader>cj  :<C-u>CocNext<CR>
 nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
@@ -75,4 +75,11 @@ nnoremap <silent> F :HopChar1CurrentLineBC<CR>
 
 nnoremap <silent> <leader>z :ZenMode<CR>
 
-nmap ge :Telescope file_browser<CR>
+nmap ge :CocCommand explorer <CR>
+
+
+inoremap <C-n> <Down>
+inoremap <C-p> <Up>
+nnoremap <C-n> <Down>
+nnoremap <C-p> <Up>
+
