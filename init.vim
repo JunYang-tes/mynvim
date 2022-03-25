@@ -43,7 +43,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'ahmedkhalf/jupyter-nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'mildred/vim-bufmru'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'windwp/nvim-spectre'
 Plug 'lukas-reineke/indent-blankline.nvim'
